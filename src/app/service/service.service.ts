@@ -9,12 +9,12 @@ import {Observable} from 'rxjs';
 })
 export class ServiceService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-  // getAll(url): Observable<any> {
-  //   return this.http.get<any>(url + '/');
-  // }
+ getAll(url): Observable<any> {
+  return this.http.get<any>(url + '/');
+ }
   //
   // save(url, depart: any): Observable<any> {
   //   const req = new HttpRequest('POST', 'url' + '/save', depart);

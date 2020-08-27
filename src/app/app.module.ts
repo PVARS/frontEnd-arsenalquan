@@ -14,6 +14,7 @@ import { AnalysisNewsComponent } from './components/analysis-news/analysis-news.
 import { NewsArsenalDetailComponent } from './components/news-arsenal-detail/news-arsenal-detail.component';
 import { TransferNewsDetailComponent } from './components/transfer-news-detail/transfer-news-detail.component';
 import { AnalysisNewsDetailComponent } from './components/analysis-news-detail/analysis-news-detail.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AnalysisNewsDetailComponent } from './components/analysis-news-detail/a
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: HomepageComponent},
       {path: 'error', component: ErrorComponent},

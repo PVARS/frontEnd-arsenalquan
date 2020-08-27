@@ -17,9 +17,9 @@ export class HeaderComponent implements OnInit {
   constructor(private userService: ServiceService) { }
 
   ngOnInit(): void {
-    // this.userService.getAll(CATEGORY_API).subscribe(data =>
-    //   this.categories = data
-    // );
+     this.userService.getAll(CATEGORY_API).subscribe(data =>
+       this.categories = data
+     );
   }
 
 }
