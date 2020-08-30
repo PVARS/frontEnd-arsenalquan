@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './main-layout/header/header.component';
 import { FooterComponent } from './main-layout/footer/footer.component';
-import { MainComponent } from './main-layout/main/main.component';
 import {RouterModule} from '@angular/router';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -21,7 +20,6 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent,
     HomepageComponent,
     ErrorComponent,
     NewsArsenalComponent,

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ServiceService} from '../../service/service.service';
 
+const NEWS_API = "http://localhost:8080/api/news"
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -8,9 +10,12 @@ import {ServiceService} from '../../service/service.service';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() {
+  public news: Array<any>;
+
+  constructor(private userService: ServiceService) {
   }
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.userService.getAll(NEWS_API).subscribe(data => {this.news = data})
+  }
 }
