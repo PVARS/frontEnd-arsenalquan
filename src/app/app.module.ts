@@ -27,7 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     AnalysisNewsComponent,
     NewsArsenalDetailComponent,
     TransferNewsDetailComponent,
-    AnalysisNewsDetailComponent
+    AnalysisNewsDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ServiceService} from '../../service/service.service';
 
 declare var $: any;
@@ -14,12 +14,18 @@ export class HeaderComponent implements OnInit {
 
   public categories: Array<any>;
 
-  constructor(private userService: ServiceService) { }
+  constructor(private userService: ServiceService) {
+  }
 
   ngOnInit(): void {
-     this.userService.getAll(CATEGORY_API).subscribe(data =>
-       this.categories = data
-     );
+    //Load Init
+    this.getCategory();
+  }
+
+  getCategory() {
+    this.userService.getAll(CATEGORY_API).subscribe(data =>
+      this.categories = data
+    );
   }
 
 }
